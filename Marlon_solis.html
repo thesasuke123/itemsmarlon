@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>items</title>
+
+	<script type="text/javascript">
+
+     var nombre = new Array();
+  
+		
+		function agregar(){
+		var valor1 = document.nombreFormulario.id1.value;
+		var valor2=document.nombreFormulario.id2.value;
+		
+		var valor3=valor1+" = "+valor2
+		nombre.push(valor3)
+				
+		
+		}
+
+		function mostrar(){
+		
+		for (i=0; i<nombre.length; i++){
+	                 
+              
+             document.getElementById('mostrar1').innerHTML += "  <br> "+nombre[i] 
+           
+                                  
+		      }
+
+		    
+
+		}
+
+
+	
+
+	</script>
+</head>
+<body>
+
+    <form name="nombreFormulario">
+
+    	<label>Nombre</label>
+		<input type="text" name="id1"/>
+		<br>
+		<label>valor</label>
+		<input type="text" name="id2"/>
+		<br>
+
+    	
+		<input type="button" value="agregar" onClick="agregar();"/>
+		<button onclick="mostrar()" type="button">Mostrar</button>
+	   <br>
+        <label>Resultado</label>
+        
+        <div  id="mostrar1"></div> 
+        
+
+</form>
+    
+ 
+
+</body>
+</html>
